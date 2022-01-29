@@ -11,19 +11,23 @@ public class StringConcept {
 		String str = new String ("New");
 		String str2 =str.concat(" Java");
 
-		System.out.println(str2);
+		System.out.println(str2 + " Without StringBuffer OR StringBuilder");
 
 		StringBuffer sb = new StringBuffer("New");
 		//REVERSE
-		System.out.println("Revers String "+sb.reverse());
+		System.out.println("Revers String with StringBuffer "+sb.reverse());
+		StringBuilder sbu = new StringBuilder("ONE");
+		sbu.reverse();
+		System.out.println(sbu + " Reverse string with StringBuilder");
 		//CONCATE 2
 		sb.append(" Java");
 		System.out.println(sb);
 
-        //CONCATE 3 - FOR LOOP //Palendrome
+		//CONCATE 3 - FOR LOOP //Palendrome
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a String");
 		String inputString = sc.next();
+		inputString = inputString.toLowerCase();
 		String rev="";
 		int len=inputString.length();
 
@@ -31,18 +35,18 @@ public class StringConcept {
 		{
 			rev=rev+inputString.charAt(i);
 		}
+		rev = rev.toLowerCase();
 
 		if(inputString.equals(rev))
 		{
-			System.out.println("The String is Panlendrome");
+			System.out.println("The String is Panlendrome " + rev);
 		}
 		else {
 			System.out.println("The String is not palendrome "+ inputString);
 		}
 
-		System.out.println(rev);
 
-        //ANAGRAM - 2
+		//ANAGRAM - 2
 		String Anag1="DOG";
 		String Anag2="GOD";
 		char[] ch1=Anag1.toCharArray();
@@ -56,12 +60,12 @@ public class StringConcept {
 			System.out.println("Its not an anagram");
 		}
 
-        //ANAGRAM - LAMDA STREAM Function
+		//ANAGRAM - LAMDA STREAM Function
 		String Occur="MALAYALAM";
 
 		long srtcount=Occur.chars().mapToObj(e->String.valueOf((char)e)).filter(e->e.equals("L")).count();
 		System.out.println("Stream func get count " +srtcount);
- 
+
 		//COUNT request caps. small
 		String Let="AbcDEFg";
 

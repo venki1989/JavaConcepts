@@ -12,7 +12,7 @@ public class HashMaps {
 		//Check if it is anagram
 		//Create HashMap to store the each string value in each hashmap as key value pair
 		//Compare both the hashMap
-		String str1="MALAYALAMN";
+		String str1="MALAYALAM";
 		String str2="MALAYALAM";
 		Map<Character, Integer> str1Map=new HashMap<Character, Integer>();
 		Map<Character, Integer> str2Map=new HashMap<Character, Integer>();
