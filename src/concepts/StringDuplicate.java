@@ -4,7 +4,7 @@ public class StringDuplicate {
 	//remove duplicate charact
 	public static void main(String[] args) {
 
-		String str="1123332331445566";
+		String str="boootttllle";
 		StringBuilder sb=new StringBuilder();
 		char[] arr=str.toCharArray();
 		for(int i=0;i<arr.length;i++)
@@ -37,7 +37,7 @@ public class StringDuplicate {
 
 
 		//Reverse Number
-		int number = 1212;
+		int number = 121243;
 		int rev=0;
 		int OriginalNum=number;
 
@@ -64,7 +64,7 @@ public class StringDuplicate {
 		StringBuffer sb3 =new StringBuffer(String.valueOf(number2));
 		StringBuffer revint=sb3.reverse();
 		System.out.println("Rever int using String buffer "+ revint);
-
+        System.out.println(0.1+0.2);
 	}
 
 }

@@ -1,12 +1,14 @@
 package concepts;
 
 public class Constructors {
+	String name;
+	int age;
+	long ssn;
 	
-	
-	Constructors()
-	{
-		System.out.println("This is constructor without parameters");
-	}
+//	Constructors()
+//	{
+//		System.out.println("This is constructor without parameters");
+//	}
 	
 	Constructors(int a, int b)
 	{
@@ -17,10 +19,7 @@ public class Constructors {
 	{
 		System.out.println("This is constructor with int and String parameters "+a+" and "+b);
 	}
-	
-	
 	//Copy Constructor
-	
 	public class copy
 	{
 		int a; String b;
@@ -41,13 +40,34 @@ public class Constructors {
 		}
 	}
 	
+	
+	
+	
+	public Constructors(String name, int age, long ssn)
+	{
+		this.name=name;
+		this.age=age;
+		this.ssn=ssn;
+				
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
         
-		Constructors ref1 = new Constructors();
+		Constructors con = new Constructors("me",25,878463);
+		System.out.println(con.name+" "+" "+ con.age +" " + con.ssn);
+		
+		
 //		Constructors ref2 = new Constructors(100,200);
 //		Constructors ref3 = new Constructors(100,"name");
-		copy ref = ref1.new copy(100, "anotherName");
-		copy ref4 = ref1.new copy(ref);
+	//	copy ref = ref1.new copy(100, "anotherName");
+	//	copy ref4 = ref1.new copy(ref);
 		
 		
 	}
